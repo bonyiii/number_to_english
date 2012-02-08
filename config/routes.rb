@@ -1,6 +1,6 @@
 NumberToEnglish::Application.routes.draw do
-  resources :converts
-
+  resources :converts, only: [ :new, :create ]
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

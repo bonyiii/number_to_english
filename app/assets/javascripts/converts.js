@@ -1,6 +1,11 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
-  
-  
-  
+jQuery.ajaxSetup({ 
+	beforeSend: function (xhr) { 
+		xhr.setRequestHeader("Accept", "text/javascript"); 
+	} 
+});
+
+jQuery(function($) {
+  $("#convert_number").keyup(function() {
+    $.post(this.form.action, $(this.form).serialize(), null,'script');
+  });
+})

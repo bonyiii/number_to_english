@@ -1,5 +1,33 @@
-<h1><%= t 'converts.new.title' %></h1>
+<%= form_for(@convert, :remote => true) do |f| %>
+<div id="form_block">
+<% if @convert.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@convert.errors.count, "error") %> prohibited this convert from being saved:</h2>
+	<ul>
+		<% @convert.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+<div class="field">
+	<%= f.label :number %>
+	<%= f.text_field :number %>
+</div>
+<div class="field">
+	<%= f.label :word %>
+	<p id="word">
+		<%= @convert.number.to_words if @convert.number.is_a?(Fixnum) %>
+	</p>
+	
+</div>
 
-<%= render 'form' %>
+<div class="field">
+	<%= f.submit %>
+</div>
+</div>
+<% end %> 
 
-<%= link_to 'Back', converts_path %>
+<div class="separator"></div>
