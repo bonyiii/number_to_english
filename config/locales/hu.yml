@@ -1,0 +1,10 @@
+hu:
+  converts:
+    new:
+      title: "Új konvertálás"
+
+  activercord:
+    attributes:
+      convert:
+        arabic: "Szám"
+        word: "Szó"

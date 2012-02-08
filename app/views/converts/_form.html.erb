@@ -1,0 +1,29 @@
+<%= form_for(@convert) do |f| %>
+<% if @convert.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@convert.errors.count, "error") %> prohibited this convert from being saved:</h2>
+	<ul>
+		<% @convert.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+<div class="field">
+	<%= f.label :arabic %>
+	<%= f.text_field :arabic %>
+</div>
+<div class="field">
+	<%= f.label :word %>
+	<p id="word"></p>
+	
+</div>
+
+<div class="field">
+	<%= f.submit %>
+</div>
+<% end %> 
+
+<div class="separator"></div>

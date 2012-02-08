@@ -1,0 +1,77 @@
+// Place all the styles related to the converts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Login form */
+#devise_block {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 500px;
+}
+
+h1.devise_block_title {
+    border-bottom: 2px solid;
+    clear: both;
+}
+
+#login_options {
+    padding-bottom: 1em;
+    clear: both;
+}
+
+/* forms */
+.field {
+    border-top: 1px dashed #AAAAAA;
+    clear: both;
+    float: left;
+    padding: 0.5em 0;
+    width: 42em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.field label {
+    font-weight: bold;
+    width: 12em;
+    clear: left;
+    float: left;
+    margin-top: 6px;
+}
+
+.field input, .field select {
+    padding: 0.25em;
+    width: 22em;
+    border: 2px solid #A79787;  
+    clear: right;
+    float: left;
+}
+
+.field input[type = "checkbox"] {
+  padding: 0.25em;
+  width: 1em;
+    border: 2px solid #A79787;  
+    clear: right;
+    float: left;
+}
+
+.field textarea {
+  padding: 0.25em;
+    border: 2px solid #DBCCB6;
+    clear: right;
+    float: left;
+}
+
+.field input[type = "text"]:focus, .field input[type = "password"]:focus {
+    background-color: #F9F7E5;
+}
+
+.field input[type = "submit"] {
+    font-weight: bold;
+    margin: 0 0 2em 10.8em;
+    padding: 0.25em 0.7em;
+    width: auto;
+}
+.separator {
+  clear: both;
+}
